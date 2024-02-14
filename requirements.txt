@@ -1,0 +1,9 @@
+absl-py
+chex
+haiku
+jax
+numpy
+optax
+tensorflow
+tensorflow-datasets
+tqdm

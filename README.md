@@ -1,31 +1,52 @@
-# spectral_ssm
+# Spectral State Space Models
 
-TODO(b/324930195): Add a description for your new project, explain what is
-being released here, etc... Additional, the following sections are normally
-expected for all releases. Feel free to add additional sections if appropriate
-for your project.
+This repository contains code for training and evaluating spectral state space
+models and accompanies the paper [Spectral State Space
+Models](https://arxiv.org/abs/2312.06837).
+
+The paper studies sequence modeling for prediction tasks with long range
+dependencies. We propose a new formulation for state space models (SSMs) based
+on learning linear dynamical systems with the spectral filtering algorithm
+(Hazan et al. (2017)). This gives rise to a novel sequence prediction
+architecture we call a spectral state space model.
+
+Spectral state space models have two primary advantages. First, they have
+provable robustness properties as their performance depends on neither the
+spectrum of the underlying dynamics nor the dimensionality of the problem.
+Second, these models are constructed with fixed convolutional filters that do
+not require learning while still outperforming SSMs in both theory and practice.
+The resulting models are evaluated on synthetic dynamical systems and long-range
+prediction tasks of various modalities. These evaluations support the
+theoretical benefits of spectral filtering for tasks requiring very long range
+memory.
 
 ## Installation
 
-Write instructions for how the user should install your code. The instructions
-should ideally be valid when copy-pasted. You can combine this with the Usage
-section if there's no separate installation step.
+Clone and navigate to the `spectral_ssm` directory containing `setup.py`. Run:
+
+```bash
+pip install -e .
+```
 
 ## Usage
 
-Write example usage of your code. The instructions should ideally be valid when
-copy-pasted, and will be used by your technical reviewer to verify that your
-package functions correctly.
+The `example.py` file contains the full training pipeline. `model.py` contains
+code for the model itself, including the Spectral Temporal Unit (STU) block.
+
+```bash
+python3 example.py
+```
 
 ## Citing this work
 
-Add citation details here, usually a pastable BibTeX snippet:
-
 ```latex
-@article{publicationname,
-      title={Publication Name},
-      author={Author One and Author Two and Author Three},
+@misc{agarwal2024spectral,
+      title={Spectral State Space Models},
+      author={Naman Agarwal and Daniel Suo and Xinyi Chen and Elad Hazan},
       year={2024},
+      eprint={2312.06837},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
 }
 ```
 

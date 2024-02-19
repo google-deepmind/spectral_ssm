@@ -33,11 +33,11 @@ setuptools.setup(
     install_requires=[
         'absl-py',
         'chex',
-        'haiku',
+        'dm-haiku',
         'jax',
         'numpy',
         'optax',
-        'tensorflow==2.5.0',
+        'tensorflow',
         'tensorflow-datasets',
         'tqdm',
     ],

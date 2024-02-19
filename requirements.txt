@@ -1,6 +1,6 @@
 absl-py
 chex
-haiku
+dm-haiku
 jax
 numpy
 optax

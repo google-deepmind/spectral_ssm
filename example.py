@@ -31,7 +31,7 @@ def main(argv: Sequence[str]) -> None:
   if len(argv) > 1:
     raise app.UsageError('Too many command-line arguments.')
 
-  train_batch_size = 49
+  train_batch_size = 48
   eval_batch_size = 48
 
   num_steps = 180_000
